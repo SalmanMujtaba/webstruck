@@ -1,20 +1,43 @@
-import React from "react";
+import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
+import React, { Suspense } from "react";
+
+import { Canvas } from "@react-three/fiber";
 import hero from "../../assets/hero-computer.png";
+
 function HeroPage() {
   return (
-    <div className='flex flex-row gap-2 h-4/5 justify-between place-items-center mx-auto w-[600px]'>
-      <div>
+    <div className='md-max:w-full flex md-max:flex-col md-max:items-center md-max:justify-center h-full justify-between w-[1400px]'>
+      <div className='flex flex-col justify-center gap-2 flex-[2] md-max:flex-1 md-max:items-center'>
         <h1 className='leading-loose text-6xl'>Webstruck</h1>
         <p className='text-2xl text-gray-200 font-normal'>
           One stop shop for your Web Needs
         </p>
         <button className='btn-hover'>Contact Us</button>
       </div>
-      <img
-        src={hero}
-        alt='hero image'
-        className='h-[650px] w-[650px] object-contain animate-heroAnimate'
-      />
+      <div className='flex-[3] relative md-max:flex-1 md-max:w-full'>
+        <Canvas>
+          <Suspense fallback={null}>
+            <OrbitControls enableZoom={false} />
+            <ambientLight intensity={1} />
+            <directionalLight position={[3, 2, 1]} />
+            <Sphere
+              args={[1.15]}
+              scale={1.6}>
+              <MeshDistortMaterial
+                color='#a696fb'
+                attach='material'
+                distort={0.5}
+                speed={2}
+              />
+            </Sphere>
+          </Suspense>
+        </Canvas>
+        <img
+          src={hero}
+          alt='hero image'
+          className='h-[600px] md-max:w-[300px] md-max:h-[300px] w-[800px] object-contain absolute inset-0 mx-auto animate-heroAnimate'
+        />
+      </div>
     </div>
   );
 }

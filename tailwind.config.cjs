@@ -42,6 +42,9 @@ module.exports = {
       },
       animation: {
         heroAnimate: 'heroAnimate 2s infinite ease alternate'
+      },
+      screens: {
+        'md-max': { 'max': '768px' },
       }
     },
   },
