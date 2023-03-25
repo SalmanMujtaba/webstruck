@@ -13,7 +13,7 @@ function HeroPage() {
       <img
         src={hero}
         alt='hero image'
-        className='h-[650px] w-[650px] object-contain'
+        className='h-[650px] w-[650px] object-contain animate-heroAnimate'
       />
     </div>
   );

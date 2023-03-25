@@ -35,6 +35,14 @@ module.exports = {
         "hero-image": "url('/src/assets/hero-computer.png')",
         "hero-texture": "url('/src/assets/hero-texture.svg')"
       },
+      keyframes: {
+        heroAnimate: {
+          to: { transform: 'translateY(20px)' },
+        }
+      },
+      animation: {
+        heroAnimate: 'heroAnimate 2s infinite ease alternate'
+      }
     },
   },
   plugins: [],
