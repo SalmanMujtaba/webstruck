@@ -58,7 +58,7 @@ export function HeadlineDynamicText() {
         <div className='align-bottom headline-slide-down mb-8 text-webstruck-dark font-normal min-w-[50px]'>
           Your one-stop shop for
         </div>
-        <div className='headline-dynamic-wrapper text-shadow text-webstruck-dark text-center mb-5'>
+        <div className='headline-dynamic-wrapper h-10 pt-2.5 pb-1 text-shadow text-webstruck-dark text-center mb-5'>
           {staticVariable.get("dynamicHeaderContent").map((value, index) => (
             <span
               key={index}
