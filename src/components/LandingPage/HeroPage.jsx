@@ -3,16 +3,16 @@ import React, { Suspense } from "react";
 
 import { Canvas } from "@react-three/fiber";
 import hero from "../../assets/hero-computer.png";
+import Button from "../Button";
+import { HeadlineDynamicText } from "../HeadlineDynamicText";
 
 function HeroPage() {
   return (
     <div className='md-max:w-full flex md-max:flex-col md-max:items-center md-max:justify-center h-full justify-between w-[1400px]'>
-      <div className='flex flex-col justify-center gap-2 flex-[2] md-max:flex-1 md-max:items-center'>
-        <h1 className='leading-loose text-6xl'>Webstruck</h1>
-        <p className='text-2xl text-gray-200 font-normal'>
-          One stop shop for your Web Needs
-        </p>
-        <button className='btn-hover'>Contact Us</button>
+      <div className='flex flex-col justify-center gap-2 flex-[2] md-max:flex-1 md-max:items-center place-items-center'>
+        <h1 className='leading-loose text-6xl place-self-center'>Webstruck</h1>
+        <HeadlineDynamicText></HeadlineDynamicText>
+        <Button>Contact Us</Button>
       </div>
       <div className='flex-[3] relative md-max:flex-1 md-max:w-full'>
         <Canvas>

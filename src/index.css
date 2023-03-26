@@ -1,10 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root {
-  --primary-color: '#0052ff'
+@layer base {
+  .root,
+  #root,
+  #docs-root {
+    --primary-color: '#a696fb';
+    --primary-color-dark: 'black';
+  }
+  .headline-dynamic-text {
+    @apply inline-block absolute top-0 left-0 opacity-0;
+  }
+  .headline-text-active {
+    @apply relative opacity-100;
+    /* position: relative;
+    opacity: 1; */
+  }
+  .headline-text-active {
+    @apply relative top-0 opacity-100;
+  }
+  .headline-slide-down .headline-text-active {
+    @apply animate-slideDownIn;
+  }
+  .headline-slide-down .headline-text-inactive {
+    @apply animate-slideDownOut;
+  }
+  .hidden-css {
+    @apply opacity-0 transition-opacity duration-300 ease-in-out;
+  }
 }
 
 .btn-hover:hover {
   background: darken(var(--primary-color), 5%) radial-gradient(circle, transparent 1%, darken(var(--primary-color), 5%) 1%) center/15000%;
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: theme('textShadow.default');
+  }
+  .button-shadow {
+    box-shadow: theme('buttonTextShadow.default');
+  }
 }

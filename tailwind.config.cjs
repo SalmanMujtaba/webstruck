@@ -67,41 +67,19 @@ module.exports = {
             transform: 'translateY(100%)',
           }
         },
-        'headline-slide-in': {
-          '0%': {
-            opacity: 0,
-            transform: 'translateX(-100%)',
-          },
-          '60%': {
-            opacity: 1,
-            transform: 'translateX(10%)',
-          },
-          to: {
-            opacity: 1,
-            transform: 'translateX(0)',
-          }
-        },
-        'headline-slide-out': {
-          '0%': {
-            opacity: 1,
-            transform: 'translateX(0)',
-          },
-          '60%': {
-            opacity: 0,
-            transform: 'translateX(110%)',
-          },
-          to: {
-            opacity: 0,
-            transform: 'translateX(100%)',
-          }
-        }
       },
       animation: {
         heroAnimate: 'heroAnimate 2s infinite ease alternate',
         slideDownIn: 'slide-down-in 0.6s',
         slideDownOut: 'slide-down-out 0.6s',
-        headlineSlideOut: 'headline-slide-out 0.6s',
-        headlineSlideIn: 'headline-slide-in 0.6s'
+        // headlineSlideOut: 'headline-slide-out 0.6s',
+        // headlineSlideIn: 'headline-slide-in 0.6s'
+      },
+      textShadow: {
+        default: '0 0 6px #ff8400',
+      },
+      buttonTextShadow: {
+        default: '0px 0px 10px #a696fb;'
       },
       screens: {
         'md-max': { 'max': '768px' },
