@@ -8,7 +8,7 @@ module.exports = {
       colors: {
         'webstruck': {
           light: '#ffff',
-          DEFAULT: '#0052ff',
+          DEFAULT: '#a696fb',
           dark: '#0F0920',
         },
         // 'heading-color': linear - gradient(to right, #553c9a 45%, # ee4b2b),
@@ -38,10 +38,70 @@ module.exports = {
       keyframes: {
         heroAnimate: {
           to: { transform: 'translateY(20px)' },
+        },
+        'slide-down-in': {
+          '0%': {
+            opacity: 0,
+            transform: 'translateY(-100%)',
+          },
+          '60%': {
+            opacity: 1,
+            transform: 'translateY(20%)',
+          },
+          to: {
+            opacity: 1,
+            transform: 'translateY(0)',
+          },
+        },
+        'slide-down-out': {
+          '0%': {
+            opacity: 1,
+            transform: 'translateY(0)',
+          },
+          '60%': {
+            opacity: 0,
+            transform: 'translateY(120%)',
+          },
+          to: {
+            opacity: 0,
+            transform: 'translateY(100%)',
+          }
+        },
+        'headline-slide-in': {
+          '0%': {
+            opacity: 0,
+            transform: 'translateX(-100%)',
+          },
+          '60%': {
+            opacity: 1,
+            transform: 'translateX(10%)',
+          },
+          to: {
+            opacity: 1,
+            transform: 'translateX(0)',
+          }
+        },
+        'headline-slide-out': {
+          '0%': {
+            opacity: 1,
+            transform: 'translateX(0)',
+          },
+          '60%': {
+            opacity: 0,
+            transform: 'translateX(110%)',
+          },
+          to: {
+            opacity: 0,
+            transform: 'translateX(100%)',
+          }
         }
       },
       animation: {
-        heroAnimate: 'heroAnimate 2s infinite ease alternate'
+        heroAnimate: 'heroAnimate 2s infinite ease alternate',
+        slideDownIn: 'slide-down-in 0.6s',
+        slideDownOut: 'slide-down-out 0.6s',
+        headlineSlideOut: 'headline-slide-out 0.6s',
+        headlineSlideIn: 'headline-slide-in 0.6s'
       },
       screens: {
         'md-max': { 'max': '768px' },
