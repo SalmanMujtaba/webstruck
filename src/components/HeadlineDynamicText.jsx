@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
+import { staticVariable } from "../utilities/contants";
+
 export function HeadlineDynamicText() {
   const headlineElementsRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -49,24 +51,23 @@ export function HeadlineDynamicText() {
   }, [currentIndex]);
 
   return (
-    <div ref={headlineElementsRef}>
+    <div
+      ref={headlineElementsRef}
+      className='text-center w-full'>
       <div className='block py-1 px-0 leading-5 text-4xl'>
-        <div className='align-bottom headline-slide-down mb-5'>
-          Help us create
+        <div className='align-bottom headline-slide-down mb-8 text-webstruck-dark font-normal min-w-[50px]'>
+          Your one-stop shop for
         </div>
-        <div className='headline-dynamic-wrapper text-shadow'>
-          <span className='headline-dynamic-text headline-text-active'>
-            4kImages
-          </span>
-          <span className='headline-dynamic-text headline-text-inactive'>
-            FullBlogs
-          </span>
-          <span className='headline-dynamic-text headline-text-inactive'>
-            Influencerposts
-          </span>
-          <span className='headline-dynamic-text headline-text-inactive'>
-            Ads
-          </span>
+        <div className='headline-dynamic-wrapper text-shadow text-webstruck-dark text-center mb-5'>
+          {staticVariable.get("dynamicHeaderContent").map((value, index) => (
+            <span
+              key={index}
+              className={`headline-dynamic-text ${
+                index === 0 ? "headline-text-active" : "headline-text-inactive"
+              }`}>
+              {value}
+            </span>
+          ))}
         </div>
       </div>
     </div>
