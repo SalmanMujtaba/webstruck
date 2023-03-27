@@ -35,6 +35,9 @@ module.exports = {
         "hero-image": "url('/src/assets/hero-computer.png')",
         "hero-texture": "url('/src/assets/hero-texture.svg')"
       },
+      spacing: {
+        'page-width': '1280px'
+      },
       keyframes: {
         heroAnimate: {
           to: { transform: 'translateY(20px)' },
@@ -76,10 +79,10 @@ module.exports = {
         // headlineSlideIn: 'headline-slide-in 0.6s'
       },
       textShadow: {
-        default: '0 0 6px #ff8400',
+        default: '1px 1px #fff',
       },
       buttonTextShadow: {
-        default: '0px 0px 10px #a696fb;'
+        default: '0px 0px 10px 0px #a696fb'
       },
       screens: {
         'md-max': { 'max': '768px' },
