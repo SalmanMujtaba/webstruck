@@ -1,14 +1,15 @@
 import "./App.css";
 
-import { useState } from "react";
+import Contact from "./components/Contact";
 import LandingPage from "./components/LandingPage/LandingPage";
+import LogoCloud from "./components/LogoCloud";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <LandingPage></LandingPage>
+      <LogoCloud></LogoCloud>
+      <Contact></Contact>
     </>
   );
 }

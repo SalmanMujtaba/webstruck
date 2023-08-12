@@ -8,7 +8,7 @@ import { HeadlineDynamicText } from "../HeadlineDynamicText";
 
 function HeroPage() {
   return (
-    <div className='md-max:w-full flex md-max:flex-col md-max:items-center md-max:justify-center h-full justify-between w-[1400px]'>
+    <div className='md-max:w-full flex md-max:flex-col md-max:items-center md-max:justify-center h-full justify-between xl:w-[1280px]'>
       <div className='flex flex-col justify-center gap-2 flex-[2] md-max:flex-1 md-max:items-center place-items-center'>
         <h1
           className='leading-relaxed  text-6xl place-self-center'
